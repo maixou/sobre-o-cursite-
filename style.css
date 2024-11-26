@@ -1,0 +1,182 @@
+/* Reset básico e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Estilos do Header e Navegação */
+header {
+    background-color: #2c3e50;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #34495e;
+}
+
+/* Seção Hero */
+#hero {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Seção de Cursos */
+#cursos {
+    padding: 4rem 2rem;
+}
+
+#cursos h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.curso-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.curso {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.curso:hover {
+    transform: translateY(-5px);
+}
+
+.curso h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Seção de Benefícios */
+#beneficios {
+    background-color: #ecf0f1;
+    padding: 4rem 2rem;
+}
+
+#beneficios h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#beneficios ul {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+#beneficios li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#beneficios li::before {
+    content: "✓";
+    color: #27ae60;
+    margin-right: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.contato {
+    margin-bottom: 2rem;
+}
+
+.contato h2 {
+    margin-bottom: 1rem;
+}
+
+address {
+    font-style: normal;
+    line-height: 1.8;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    .curso-container {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.curso {
+    animation: fadeIn 0.5s ease-out;
+}
